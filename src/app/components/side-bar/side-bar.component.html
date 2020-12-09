@@ -1,11 +1,4 @@
-<mat-toolbar color="basic">
-    <button  mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"  (click)="opened=!opened">
-     <mat-icon>menu</mat-icon>
-    </button>
-   <span><h1>Real Choice</h1></span>
-   <span class="example-spacer"></span>
- </mat-toolbar>
- <mat-sidenav-container>
+<mat-sidenav-container>
     <mat-sidenav mode="side" [(opened)]="opened">
     
         <mat-nav-list>
@@ -15,5 +8,6 @@
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
+        
     </mat-sidenav-content>
 </mat-sidenav-container>
