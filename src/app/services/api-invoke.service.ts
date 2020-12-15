@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-// import { Observable } from 'rxjs/Observable';
-import { ICategoriesModel } from 'components/interface/rao-admin-model';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { ICategoriesModel } from 'src/app/components/interface/rao-admin-model';
 
 @Injectable()
 export class ApiInvokeService {
@@ -15,6 +14,8 @@ export class ApiInvokeService {
   //orderHistoryURL: string = "http://localhost:5000/order_history";
   //categoriesEndPointUrl: string = "http://localhost:5000/categories";
   //productsEndPointUrl: string = "http://localhost:5000/products";
+
+  currentProductInfo:any;
 
   constructor(private http: HttpClient) { }
 
@@ -48,4 +49,12 @@ update(getUrl: string, data: any): Observable<any>  {
    return this.http.put<any>(getUrl, options);
 }
 
+
+setCurrentProductInfo(productInfo:any){
+  this.currentProductInfo = productInfo;
+}
+
+getCurrentProductInfo(){
+  return this.currentProductInfo;
+}
 }

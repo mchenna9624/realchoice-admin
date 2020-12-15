@@ -1,0 +1,16 @@
+mat-card {
+    transform: translate3d(0, 0, 0);
+    background-color: lightgray !important;
+  }
+  mat-card-content{
+      color: black;
+      border: black solid 3px;
+      border-spacing: 0;
+
+  }
+
+  .right{
+position: relative;
+left: 93%;
+bottom:50px;
+  }

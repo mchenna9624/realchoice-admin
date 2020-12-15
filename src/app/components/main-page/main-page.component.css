@@ -10,9 +10,8 @@ height: 100%;
     width: 200px;
 }
 .example-spacer {
-    flex: 1 1 auto;
+    flex:1 1 auto ;
   }
-  .example-icon{
-     
-      
+  mat-icon #menu {
+     padding: 5 10px;
   }

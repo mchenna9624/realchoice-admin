@@ -1,30 +1,30 @@
-import { Injectable } from '@angular/core';
-// import { ICategoriesModel, IProductsModel } from '../interfaces/rao-admin-model'
+// import { Injectable } from '@angular/core';
+// import { ICategoriesModel, IProductsModel } from '../interfaces/rao-admin-model';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class CacheService {
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class CacheService {
 
-  private categories: ICategoriesModel;
-  private product: IProductsModel;
+//   private categories: ICategoriesModel;
+//   private product: IProductsModel;
 
-  constructor() { }
+//   constructor() { }
 
-  setCategoreis(categories: ICategoriesModel): void{
-    this.categories = categories;
-  }
+//   setCategoreis(categories: ICategoriesModel): void{
+//     this.categories = categories;
+//   }
 
-  getCategories(): ICategoriesModel{
-    return this.categories;
-  }
+//   getCategories(): ICategoriesModel{
+//     return this.categories;
+//   }
 
-  setEditableProduct(product: IProductsModel): void {
-    this.product = product;
-  }
+//   setEditableProduct(product: IProductsModel): void {
+//     this.product = product;
+//   }
 
-  getEditableProduct(): IProductsModel {
-    return this.product;
-  }
+//   getEditableProduct(): IProductsModel {
+//     return this.product;
+//   }
 
-}
+// }
