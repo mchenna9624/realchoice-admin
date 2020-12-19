@@ -1,0 +1,14 @@
+
+
+.card{
+    background-color:skyblue;
+    padding: 80px;
+}
+button{
+    float:right;
+}
+mat-icon{
+    float:right;
+    font-size:20px;
+    cursor:pointer;
+}

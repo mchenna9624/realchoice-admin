@@ -1,1 +1,19 @@
-<p>products works!</p>
+<mat-card class="card">
+  <mat-card>
+  `<table class="table">
+    <thead >
+      <tr>
+        <th>Products</th>
+        <th><button mat-raised-button (click)="open()" routerLink="/enterdetails">Add Product</button></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productsList">
+       <td> {{product.productName}} - {{product.category}}</td>
+       <td><mat-icon>delete_outline</mat-icon></td>
+        <td><mat-icon routerLink="/details">edit</mat-icon></td>
+      </tr>
+    </tbody>
+  </table>
+</mat-card>
+</mat-card>

@@ -1,0 +1,86 @@
+<mat-card class="card">
+    <mat-card class="cards">
+        <form [formGroup]="addmore">
+        <b>
+            Enter Product Details
+        </b>
+        <table>
+            <div class="row">
+                <label>Product name</label>
+                <input class="col-md-3" type="text" class="form-control input" placeholder="Enter Product Name">
+            </div>
+            <div class="row">
+                <label>Price</label>
+                <input class="col-md-3" type="text" class="form-control input" placeholder="Enter Product Price">
+            </div>
+            <div class="row">
+                <label>stock</label>
+                <input class="col-md-3" type="text" class="form-control input" placeholder="Enter Product Stock">
+            </div>
+            <div class="row">
+                <label>Sale Price</label>
+                <input class="col-md-3" type="text" class="form-control input" placeholder="Enter Sale Price">
+            </div>
+            <div class="row">
+                <label>Image Location</label>
+                <input class="col-md-3" type="text" class="form-control input" placeholder="Enter Image Location">
+            </div>
+            <div class="row">
+                <label>Discount</label>
+                <input class="col-md-3 " type="text" class="form-control input" placeholder="Enter Discount">
+            </div>
+            <div class="row">
+                <label>Short Description</label>
+                <input class="col-md-3" type="text" class="form-control input" placeholder="Enter Short Description">
+            </div>
+            <div>
+                <textarea class="form-control" placeholder="Description"></textarea>
+            </div>
+            <div>
+                <input type="text" class="form-control select" placeholder="Please Select Category">
+            </div>
+        </table>
+        <div class="table-responsive" formArrayName="itemRows">
+            <span>
+                <legend>Slab Details
+                        <button mat-raised-button  color="primary" (click)="addNewRow()">Add slab details</button>
+                </legend>
+            </span>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                    <th>Actions</th>
+                    <th>Id</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Margin %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr *ngFor="let itemrow of addmore.controls.itemRows['controls'];let i=index" [formGroup]="addmore">
+                        <td>
+                            <mat-icon *ngIf="addmore.controls.itemRows.controls.length> 1"(click)="deleteRow(i)">close</mat-icon>
+                        </td>
+                        <td>
+                            <input class="form-control" 
+                                placeholder="Id">
+                        </td>
+                        <td>
+                            <input class="form-control" placeholder="Quantity">
+                        </td>
+                        <td>
+                            <input class="form-control" placeholder="Price">
+                        </td>
+                        <td>
+                            <input class="form-control" placeholder="Margin %">
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </form>
+    </mat-card>
+</mat-card>
