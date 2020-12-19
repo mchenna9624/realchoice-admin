@@ -1,1 +1,12 @@
-<p>main-page works!</p>
+<mat-toolbar color="primary" class="mat-elevation-z8">
+   <span><h1>Real Choice</h1></span>
+   <span class="example-spacer"></span>
+    <a mat-button routerLink="orders"><mat-icon>add_shopping_cart</mat-icon>Orders</a>
+            <a mat-button routerLink="products">Products</a>
+            <a mat-button routerLink="category">Category</a>
+            <button mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon></button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Messages<mat-icon> email</mat-icon></button>
+  <button mat-menu-item>Account<mat-icon>account_circle</mat-icon></button>
+</mat-menu>
+ </mat-toolbar>

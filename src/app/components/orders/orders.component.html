@@ -1,1 +1,35 @@
-<p>orders works!</p>
+
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>ORDER ID</th>
+      
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Street Addres</th>
+            <th scope="col">City</th>
+            <th scope="col">Zip</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone </th>
+            <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      <tr *ngFor ="let d of data; let i = index " (click)="goToPage(d)">
+        
+        <td>{{d.ORDER_ID}} </td>
+        <td>{{d.FIRST_NAME}}</td>
+        <td>{{d.LAST_NAME}}</td>
+        <td>{{d.STREET_ADDRESS}}</td>
+        <td>{{d.CITY_ADDRESS}}</td>
+        <td>{{d.ZIP_ADDRESS}}</td>
+        <td>{{d.EMAIL_ADDRESS}}</td>
+        <td>{{d.PHONE}}</td>
+        <td><button type="button" class="btn btn-danger "><mat-icon>delete</mat-icon></button></td>
+    </tr>
+  </tbody>
+</table>
+<div class="left">
+  <button type="button" class="btn btn-primary btn-lg"><mat-icon>add</mat-icon>Add</button>
+</div>
